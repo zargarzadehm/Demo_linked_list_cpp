@@ -88,7 +88,7 @@ Form::Form(QWidget *parent, int value1, int value) :
 
         QPushButton * node = new QPushButton(QString::number(value1));
         QPushButton * endnode = new QPushButton(QString::number(value));
-        QLabel *step3 = new QLabel("Step 3 :");
+        QLabel *step3 = new QLabel("Finall :");
         QLabel *arrow6 = new QLabel("-->");
         QLabel *arrow7 = new QLabel("-->");
         QLabel *Nul2 = new QLabel("NULL");

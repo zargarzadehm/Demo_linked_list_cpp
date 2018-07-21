@@ -2,6 +2,7 @@
 #include <QTime>
 #include <QTimer>
 #include <form.h>
+#include <add_start.h>
 
 list obj;
 
@@ -161,7 +162,11 @@ void list::insert_start(int value)
     temp->data=value;
     temp->lable->setText(QString::number(value));
     temp->next=head;
+    int value1 = head->data;
     head=temp;
+
+    Add_start *omg = new Add_start(0,value1,value);
+    omg->show();
 }
 void list::insert_position(int pos, int value)
 {
