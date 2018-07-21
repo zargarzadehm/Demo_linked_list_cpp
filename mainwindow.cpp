@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include <QTime>
 #include <QTimer>
+#include <form.h>
 
 list obj;
 
@@ -106,6 +107,7 @@ list::list()
 void list::createnode(int value)
 {
     node *temp=new node;
+    int value1 = 0;
     temp->data=value;
     temp->lable = new QPushButton;
     temp->lable->setText(QString::number(value));
@@ -115,14 +117,19 @@ void list::createnode(int value)
         head=temp;
         tail=temp;
         temp=NULL;
+        value1 = -253;
     }
     else
     {
         tail->lable_fake = new QPushButton("     ");
         tail->lable_fake1 = new QLabel(" |\n |\nV");
         tail->next=temp;
+        value1 = tail->data;
         tail=temp;
     }
+
+    Form *omg = new Form(0,value1,value);
+    omg->show();
 }
 void list::display()
 {
