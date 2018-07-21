@@ -26,11 +26,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    form.cpp
+    form.cpp \
+    add_start.cpp
 
 HEADERS += \
         mainwindow.h \
-    form.h
+    form.h \
+    add_start.h
 
 FORMS += \
-    form.ui
+    form.ui \
+    add_start.ui
